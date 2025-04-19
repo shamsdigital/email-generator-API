@@ -1,0 +1,11 @@
+# email-generator-api/render.yaml
+services:
+  - type: web
+    name: email-generator-api
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: ./start.sh
+    envVars:
+      - key: OPENROUTER_API_KEY
+        value: sk-or-REPLACE_YOUR_KEY_HERE
